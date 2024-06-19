@@ -51,6 +51,3 @@ if start_button:
         st.session_state['df_experiment_results'].reset_index(drop=True)
 
 st.write(st.session_state['df_experiment_results'])
-if start_button:
-    st.write(f'Running the experient of {number_of_trials} trials.')
-    mean = toss_coin(number_of_trials)
