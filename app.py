@@ -1,6 +1,14 @@
+import pandas as pd
 import scipy.stats
 import streamlit as st
 import time
+
+# these are stateful variables which are preserved as Streamlin reruns this script
+if 'experiment_no' not in st.session_state:
+    st.session_state['experiment_no'] = 0
+
+if 'df_experiment_results' not in st.session_state:
+    st.session_state['df_experiment_results'] = pd.DataFrame(columns=['no', 'iterations', 'mean'])
 
 st.header('Tossing a Coin')
 
